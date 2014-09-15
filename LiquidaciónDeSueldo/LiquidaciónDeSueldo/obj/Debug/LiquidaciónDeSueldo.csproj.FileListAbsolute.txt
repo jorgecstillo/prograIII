@@ -1,0 +1,6 @@
+C:\Users\jorge\Documents\GitHub\prograIII\LiquidaciónDeSueldo\LiquidaciónDeSueldo\bin\Debug\LiquidaciónDeSueldo.exe.config
+C:\Users\jorge\Documents\GitHub\prograIII\LiquidaciónDeSueldo\LiquidaciónDeSueldo\bin\Debug\LiquidaciónDeSueldo.exe
+C:\Users\jorge\Documents\GitHub\prograIII\LiquidaciónDeSueldo\LiquidaciónDeSueldo\bin\Debug\LiquidaciónDeSueldo.pdb
+C:\Users\jorge\Documents\GitHub\prograIII\LiquidaciónDeSueldo\LiquidaciónDeSueldo\obj\Debug\LiquidaciónDeSueldo.csprojResolveAssemblyReference.cache
+C:\Users\jorge\Documents\GitHub\prograIII\LiquidaciónDeSueldo\LiquidaciónDeSueldo\obj\Debug\LiquidaciónDeSueldo.exe
+C:\Users\jorge\Documents\GitHub\prograIII\LiquidaciónDeSueldo\LiquidaciónDeSueldo\obj\Debug\LiquidaciónDeSueldo.pdb
