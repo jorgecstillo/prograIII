@@ -20,7 +20,7 @@ namespace Liquidacion
         static int sueldo;
         static int sueldofds;
         //static int Descuentos;
-        static int Bonos;
+        static int Bonos = 65000;
         static int sueldoLiquido;
         static int sueldoBruto;
         static int previsionSalud;
@@ -33,40 +33,33 @@ namespace Liquidacion
 
             mensajeInicial();
             SolicitarHorasTraSem();
-            //HorasTrabajadasSemana =
-            capturarHorasTrabSem();
+            HorasTrabajadasSemana = capturarHorasTrabSem();
 
             SolicitarHorasTrafds();
-            //HorasTrabajasfds = 
-            capturarHorasTrabfds();
+            HorasTrabajasfds = capturarHorasTrabfds();
 
             SolicitarValorHora();
-            capturarValorHora();
+            ValorHora = capturarValorHora();
 
             SolicitarMes();
-            capturarMes();
+            Mes = capturarMes();
 
             SolicitarRut();
-            capturarRut();
+            Rut = capturarRut();
 
             SolicitarAño();
-            capturarAño();
+            Año = capturarAño();
 
             solicitarNombre();
-            capturarNombre();
+            Nombre = capturarNombre();
 
             SolicitarApellido();
-            capturarApellido();
+            Apellido = capturarApellido();
 
             SolicitarAnticipos();
-            capturarAnticipos();
-            
-            
-            SolicitarBonos();
-            capturarBonos();
+            Anticipos = capturarAnticipos();
 
-            //sueldo = 
-                SueldoHora(HorasTrabajadasSemana, ValorHora);
+            sueldo = SueldoHora(HorasTrabajadasSemana, ValorHora);
             sueldofds = SueldoHorafds(HorasTrabajasfds, ValorHora);
 
             sueldoBruto = calcularSueldoBruto(sueldo, sueldofds, Bonos);
@@ -97,25 +90,11 @@ namespace Liquidacion
             Console.WriteLine("Ingrese Cantidad de Horas Trabajadas en la Semana :");
         }
 
-        static void capturarHorasTrabSem()
+        static int capturarHorasTrabSem()
         {
             int HorasTrabajadasSemana;
-            try
-            {
-                
-                HorasTrabajadasSemana = Convert.ToInt16(Console.ReadLine());
-                return;
-            }
-
-            catch (FormatException)
-            {
-                Console.WriteLine("Ingrese solo Numeros ");
-                return;
- 
-            }
-            
-            capturarHorasTrabSem();
-            
+            HorasTrabajadasSemana = Convert.ToInt16(Console.ReadLine());
+            return HorasTrabajadasSemana;
         }
 
 
@@ -125,22 +104,11 @@ namespace Liquidacion
             Console.WriteLine("Ingrese Cantidad de Horas Trabajadas en el fin de Semana :");
         }
 
-        static void capturarHorasTrabfds()
+        static int capturarHorasTrabfds()
         {
-            try
-            { 
             int HorasTrabajadasfds;
             HorasTrabajadasfds = Convert.ToInt16(Console.ReadLine());
-            return;
-             }
-        
-            catch
-            {
-                Console.WriteLine("Ingrese solo Numeros :");
-            }
-            capturarHorasTrabfds();
-
-           
+            return HorasTrabajadasfds;
         }
 
 
@@ -149,21 +117,11 @@ namespace Liquidacion
             Console.WriteLine("Ingrese el valor de la Hora Trabajada :");
         }
 
-        static void capturarValorHora()
+        static int capturarValorHora()
         {
-            try
-            {
-                int ValorHora;
-                ValorHora = Convert.ToInt16(Console.ReadLine());
-                return;
-            }
-
-            catch
-            {
-                Console.WriteLine("Ingrese solo numeros ");
-
-            }
-            capturarValorHora();
+            int ValorHora;
+            ValorHora = Convert.ToInt16(Console.ReadLine());
+            return ValorHora;
         }
 
 
@@ -173,19 +131,11 @@ namespace Liquidacion
             Console.WriteLine("Ingrese el Mes actual  :");
         }
 
-        static void capturarMes()
+        static string capturarMes()
         {
-            try
-            {
-                String Mes;
-                Mes = System.Console.ReadLine();
-                return;
-            }
-            catch
-            {
-                Console.WriteLine("Ingrese el mes en formato de texto, no Numerico :");
-            }
-            SolicitarMes();
+            String Mes;
+            Mes = System.Console.ReadLine();
+            return Mes;
         }
 
 
@@ -196,39 +146,26 @@ namespace Liquidacion
             Console.WriteLine("Ingrese Año actual :");
         }
 
-        static void capturarAño()
+        static int capturarAño()
         {
-            try
-            {
-                int Año;
-                Año = Convert.ToInt32(Console.ReadLine());
-                return;
-            }
-            catch
-            {
-                Console.WriteLine("Ingrese año en formato Numerico :");
-            }
-            capturarAño();
+            int Año;
+            Año = Convert.ToInt32(Console.ReadLine());
+            return Año;
         }
+
+
+
 
         static void SolicitarRut()
         {
             Console.WriteLine("Ingrese su Rut sin guion :");
         }
 
-        static void capturarRut()
+        static int capturarRut()
         {
-            try
-            {
-                int Rut;
-                Rut = Convert.ToInt32(Console.ReadLine());
-                return;
-            }
-            catch
-            {
-                Console.WriteLine("Ingrese Rut en Numeros sin guion :");
-            }
-            capturarRut();
+            int Rut;
+            Rut = Convert.ToInt32(Console.ReadLine());
+            return Rut;
         }
 
 
@@ -238,19 +175,11 @@ namespace Liquidacion
             Console.WriteLine("Ingrese su Nombre  :");
         }
 
-        static void capturarNombre()
+        static string capturarNombre()
         {
-            try
-            {
-                String Nombre;
-                Nombre = System.Console.ReadLine();
-                return;
-            }
-            catch
-            {
-                Console.WriteLine("Ingrese Nombre sin caracteres numericos :");
-            }
-            capturarNombre();
+            String Nombre;
+            Nombre = System.Console.ReadLine();
+            return Nombre;
         }
 
 
@@ -259,20 +188,16 @@ namespace Liquidacion
             Console.WriteLine("Ingrese sus Apellidos  :");
         }
 
-        static void capturarApellido()
+        static string capturarApellido()
         {
-            try
-            {
-                String Apellido;
-                Apellido = System.Console.ReadLine();
-                return;
-            }
-            catch
-            {
-                Console.WriteLine("Ingrese sus Apellidos sin caracteres Numericos :");
-            }
-            capturarApellido();
+            String Apellido;
+            Apellido = System.Console.ReadLine();
+            return Apellido;
         }
+
+
+
+
 
         static void SolicitarAnticipos()
         {
@@ -288,32 +213,24 @@ namespace Liquidacion
 
 
 
-        static void SolicitarBonos()
+        /*static void SolicitarBonos()
         {
             Console.WriteLine("Ingrese el valor total de los Bonos   :");
         }
 
-        static void capturarBonos()
+        static int capturarBonos()
         {
-            try
-            {
-                int Bonos;
-                Bonos = Convert.ToInt32(Console.ReadLine());
-                return;
-            }
-            catch
-            {
-                Console.WriteLine("Ingrese valor Numerico   :");
-            }
-            capturarBonos();
+            int Bonos;
+            Bonos = Convert.ToInt32(Console.ReadLine());
+            return Bonos;
         }
-        
+        */
 
-        static void SueldoHora(int HorasTrabajasSemana, int ValorHora)
+        static int SueldoHora(int HorasTrabajasSemana, int ValorHora)
         {
             int sueldo;
             sueldo = HorasTrabajadasSemana * ValorHora;
-            return;
+            return sueldo;
 
         }
 
